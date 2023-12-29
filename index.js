@@ -12,7 +12,7 @@ let player = { //ES6 usage
     playerName: "Parasuram",
     chips: 45,
 }
-
+//test
 playerEl.textContent = player.playerName + ':'+' '+'$'+player.chips
 
 
