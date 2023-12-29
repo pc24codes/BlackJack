@@ -1,3 +1,4 @@
+
 let cards = []
 let sum = 0
 let hasBlackJack = false
@@ -6,9 +7,14 @@ let message = ""
 let messageEl = document.getElementById("message-el")
 let sumEl = document.getElementById("sum-el")
 let cardsEl = document.getElementById("cards-el")
+let playerEl = document.getElementById("player-el")
+let player = { //ES6 usage
+    playerName: "Parasuram",
+    chips: 45,
+}
 
-//Commit for testing
-//testing for commit
+playerEl.textContent = player.playerName + ':'+' '+'$'+player.chips
+
 
 
 function getRandomCard() {
@@ -52,9 +58,16 @@ function renderGame() {
 
 
 function newCard() {
-    // Only allow the player to get a new card if she IS alive and does NOT have Blackjack
+    
+    if(isAlive === true && hasBlackJack ===false)
+    {
     let card = getRandomCard()
     sum += card
     cards.push(card)
     renderGame()
+    }
+    else{
+        location.reload()
+    }
 }
+
