@@ -8,6 +8,8 @@ let sumEl = document.getElementById("sum-el")
 let cardsEl = document.getElementById("cards-el")
 
 //Commit for testing
+//testing for commit
+
 
 function getRandomCard() {
     let randomNumer = Math.floor( Math.random()*13 ) + 1
